@@ -1,0 +1,22 @@
+# Project Context: Therapist Website Merge
+
+## The Goal
+We are merging two codebases to create a unified Next.js website for a therapy practice. 
+*   **Base Architecture:** Next.js (Version A).
+*   **Content Priority:** The text, structure, and bottom 80% of the components MUST be preserved from Version A.
+*   **Design Priority:** The UI, styling, and layout for the `Header` and `Hero` components MUST be extracted from Version B (React/Vite) and adapted into Version A.
+
+## Vibecoding & AI Guardrails (Core Best Practices)
+*   **Modularity & File Size (Max 250 Lines):** Keep components hyper-focused. If a file approaches 250 lines, actively propose refactoring. Extract sub-components, UI elements, or logic into separate files (e.g., custom hooks or utility functions).
+*   **Surgical Precision:** Apply changes strictly to the requested scope. Do not rewrite surrounding logic, and NEVER delete existing comments, SEO metadata, or functional hooks unless explicitly instructed.
+*   **No AI Laziness:** Never output placeholders like `// ... existing code ...`. Always provide complete, fully functional, and ready-to-paste code blocks when modifying a file.
+*   **Thematic & Aesthetic Consistency:** 
+    *   Strictly adhere to the established design system (Tailwind config, global CSS variables). Do not invent new hex codes or arbitrary spacing values.
+    *   Maintain the "vibe": ensure UI elements have smooth transitions, defined hover/focus states, and a calming, professional visual hierarchy suitable for a therapy practice.
+*   **Accessibility (a11y) First:** Semantic HTML is non-negotiable. Always include appropriate `aria-labels`, `alt` text on Next.js `<Image />` components, and ensure interactive elements are keyboard navigable.
+*   **Responsive Default:** Write mobile-first CSS. Ensure everything scales perfectly from small mobile screens up to large desktops without overlapping or horizontal scrolling.
+
+## Migration Rules (Vite to Next.js)
+1.  **Routing:** Convert standard `<a>` tags or `react-router-dom` links from Version B into Next.js `<Link href="...">` components.
+2.  **Images:** Convert standard `<img>` tags from Version B into Next.js `<Image />` components, ensuring width/height or `fill` props are added.
+3.  **Imports:** Update relative imports from Version B to use Version A's absolute path aliases (e.g., `@/src/components/...`).
