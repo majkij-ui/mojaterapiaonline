@@ -8,8 +8,8 @@
       "port": 3000
     },
     {
-      "name": "version-b (Vite – reference only)",
-      "runtimeExecutable": "npm",
+      "name": "version-b (Vite)",
+      "runtimeExecutable": "/usr/local/bin/npm",
       "runtimeArgs": ["--prefix", "version-b", "run", "dev"],
       "port": 5173
     }
